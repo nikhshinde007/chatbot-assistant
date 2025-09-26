@@ -1,0 +1,39 @@
+{
+  "name": "chatbot-assistant",
+  "version": "3.0.0",
+  "description": "AI-powered Chatbot Assistant Chatbot for code, document, and error diagnostics",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "api": "node --env-file=.env src/api-server.js",
+    "dev": "concurrently \"npm run api\" \"npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chatbot",
+    "code-analysis",
+    "debugging",
+    "llm",
+    "mcp",
+    "claude"
+  ],
+  "author": "Sanjay Ojha",
+  "license": "Cerillion PLC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "mammoth": "^1.5.4",
+    "node-cache": "^5.1.2",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
